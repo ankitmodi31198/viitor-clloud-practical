@@ -1,0 +1,55 @@
+<div class="signup-main-container height100 width100">
+    <app-login-wrapper [openFrom]="googleAuthorizationOpenedFrom" (eSocialUser)="solialUserHandler($event)">
+        <div class="login-signup-content-container">
+            <div class="login-signup-header-container">
+                <div class="login-signup-header-main-text-container">
+                    Create an account
+                </div>
+                <div class="login-signup-header-other-text-container">
+                    or <span class="link-text-hover-container" (click)="changeLoginType()">
+                        sign in to your account
+                    </span>
+                </div>
+            </div>
+            <div class="login-signup-form-container">
+                <form appFormGroup [formGroup]="signUpForm">
+                    <!-- First name form field -->
+                    <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="firstName" placeholder="Name">
+                    </mat-form-field>
+                    <!-- Email form field -->
+                    <mat-form-field appFormField="Email" class="form-field-container" appearance="fill">
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field>
+                    <!-- Phone number form field -->
+                    <mat-form-field appFormField="Phone number" class="form-field-container" appearance="fill">
+                        <input matInput type="tel" formControlName="contactNumber" placeholder="Phone number">
+                    </mat-form-field>
+                    <!-- Password form field -->
+                    <mat-form-field appFormField="Password" class="form-field-container" appearance="fill">
+                        <input matInput #passwordInputElement type="password" formControlName="password"
+                            placeholder="Password">
+                        <span *ngIf="passwordInputElement.type === 'password'"
+                            class="form-field-label-icon-container fa fa-eye"
+                            (click)="changePasswordControlType('text', passwordInputElement)"></span>
+                        <span *ngIf="passwordInputElement.type === 'text'"
+                            class="form-field-label-icon-container fa fa-eye-slash"
+                            (click)="changePasswordControlType('password', passwordInputElement)"></span>
+                    </mat-form-field>
+                    <!-- Confirm password form field -->
+                    <mat-form-field appFormField="Confirm password" class="form-field-container" appearance="fill">
+                        <input matInput #confirmPasswordInputElement type="password" formControlName="confirmPassword"
+                            placeholder="Confirm password">
+                        <span *ngIf="confirmPasswordInputElement.type === 'password'"
+                            class="form-field-label-icon-container fa fa-eye"
+                            (click)="changePasswordControlType('text', confirmPasswordInputElement)"></span>
+                        <span *ngIf="confirmPasswordInputElement.type === 'text'"
+                            class="form-field-label-icon-container fa fa-eye-slash"
+                            (click)="changePasswordControlType('password', confirmPasswordInputElement)"></span>
+                    </mat-form-field>
+                </form>
+                <button mat-raised-button color="primary" (click)="signUp()">Sign up</button>
+            </div>
+        </div>
+    </app-login-wrapper>
+</div>

@@ -1,0 +1,19 @@
+<div class="login-wrapper-main-container height100 width100">
+    <div class="login-wrapper-company-details-container">
+        <ng-lottie [options]="teamWorkOptions">
+        </ng-lottie>
+    </div>
+    <div class="login-wrapper-content-wrapper-container">
+        <div class="login-wrapper-content-container">
+            <ng-content></ng-content>
+            <div class="login-wrapper-divider-container">
+                <div class="login-wrapper-divider-text-container">
+                    OR
+                </div>
+            </div>
+            <app-google-authorization [googleAuthorizationOpenedFrom]="openFrom"
+                (eSocialUser)="socialUserChangeHandler($event)">
+            </app-google-authorization>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,254 @@
 /* You can add global styles to this file, and also import other style files */
+@import './custom-theme.scss';
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    // font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: $fontFamily;
+    color: $textColor;
+    
+    * {
+        outline: none;
+    }
+}
+
+button {
+    &.mat-button-base {
+        font-family: $fontFamily !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        margin-right: 0.5rem;
+    }
+}
+
+.display-flex {
+    display: flex;
+}
+
+.cdk-overlay-container {
+    z-index: 99999999 !important;
+    snack-bar-container {
+        &.mat-snack-bar-container {
+            padding: 0;
+            min-width: auto;
+            background-color: $backgroundColor;
+            color: $textColor;
+        }
+    }
+}
+
+.icon-container.fa {
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mat-menu-panel {
+    .mat-menu-content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        .mat-menu-item {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.height100 {
+    height: 100%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width50 {
+    width: 50%
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.content-width-resolution-wise {
+    margin: auto;
+}
+
+.vertical-scroll {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.link-text-hover-container {
+    &:hover {
+        color: $primaryColor;
+        cursor: pointer;
+    }
+}
+
+.form-field-container {
+    height: 4rem;
+    position: relative;
+    width: 100%;
+    input {
+        width: -webkit-fill-available;
+        border-radius: 0.5rem;
+        border: 1px solid $lightGrayColor;
+        padding: 0.5rem;
+        font-family: $fontFamily;
+        height: 2.5rem;
+        box-sizing: inherit;
+        &:focus {
+            outline: none;
+            border-color: $primaryColor;
+            box-shadow: 0 2px 4px rgba($color: $primaryColor, $alpha: 0.2);
+        }
+        &.ng-invalid.ng-touched {
+            border-color: $errorColor;
+        }
+        &::placeholder {
+            color: $lightGrayColor;
+        }
+    }
+    .form-field-label-icon-container {   
+        position: absolute;
+        right: 1rem;
+        top: 0.4rem;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .invalid-form-field-error-message-container {
+        color: $errorColor;
+        margin-left: 0.3rem;
+        margin-top: 0.1rem;
+        font-size: 0.6rem;
+    }
+    &.data-form-field-container {
+        &.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix {
+            right: 0;
+            bottom: 0;
+        }
+        input.mat-input-element:disabled {
+            color: $textColor;
+        }
+    }
+}
+
+.mat-option {
+    font-family: $fontFamily !important;
+}
+
+.mat-form-field {
+    &.mat-form-field-appearance-legacy, &.mat-form-field-appearance-fill {
+        .mat-form-field-wrapper {
+            padding-bottom: 0;
+            .mat-form-field-flex {
+                padding: 0;
+                background-color: transparent;
+                .mat-form-field-infix {
+                    padding: 0;
+                    border: none;
+                    .mat-form-field-label-wrapper {
+                        top: 0;
+                        padding-top: 0;
+                    }
+                }
+                .mat-form-field-suffix {
+                    position: absolute;
+                    right: 2%;
+                    bottom: 25%;
+                }
+            }
+            .mat-form-field-underline {
+                display: none;
+            }
+        }
+    }
+}
+
+.mat-accordion {
+    .mat-expansion-panel {
+        .mat-expansion-panel-header {
+            font-family: $fontFamily;
+            .filter-expansion-panel-header-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-right: 1rem;
+                align-items: center;
+                .filter-expansion-panel-header-title-container {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .filter-expansion-panel-fields-container {
+            .form-field-container {
+                width: 20%;
+                padding-right: 1.5rem;
+            }
+        }
+        .filter-expansion-panel-buttons-container {
+            padding-top: 1rem;
+            text-align: end;
+        }
+    }
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+    .content-width-resolution-wise {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .content-width-resolution-wise {
+        width: 95%;
+    }
+}
+
+/* Normal devices (small size laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .content-width-resolution-wise {
+        width: 90%;
+    }
+} 
+
+/* Large devices (large laptops and normal desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .content-width-resolution-wise {
+        width: 80%;
+        .plans-container {
+            width: 100%;
+        }
+    }
+}
+
+/* Extra large devices ( large size desktops, 1536px and up */
+@media only screen and (min-width: 1536px) {
+    .content-width-resolution-wise {
+        width: 75%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $lightGrayColor;
+    border-radius: $borderRadius;
+    &:hover {
+        background: $darkGrayColor;
+    }
+}

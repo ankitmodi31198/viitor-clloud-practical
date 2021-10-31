@@ -1,0 +1,29 @@
+.sevenx-google-authorization-container {
+    max-width: 350px;
+    padding: 7.5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    border: 1px solid;
+    border-width: 1px;
+    border-radius: 8px;
+    --border-opacity: 1;
+    // border-color: #1678fb;
+    border-color: rgba(22,120,251,var(--border-opacity));
+    background-color: transparent;
+    > .sevenx-google-authorization-button {
+        color: red;
+    }
+    > .sevenx-google-authorization-google-image {
+        width: 16px;
+    }
+    > .sevenx-google-authorization-google-text {
+        --text-opacity: 1;
+        // color: #1678fb;
+        color: rgba(22, 120, 251, var(--text-opacity));
+        padding-left: 0.75rem;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}

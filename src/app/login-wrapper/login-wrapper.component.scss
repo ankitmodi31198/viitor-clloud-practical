@@ -1,0 +1,155 @@
+@import '../../custom-theme.scss';
+
+$loginSignupFormWidth: 20rem;
+
+.login-wrapper-main-container {
+    display: flex;
+    .login-wrapper-company-details-container {
+        width: 30%;
+        // background-color: #fcfcfc;
+        background-color: rgba($color: $primaryColor, $alpha: 0.1);
+    }
+    .login-wrapper-content-wrapper-container {
+        // width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &.login-wrapper-content-wrapper-container-width100 {
+            width: 100%;
+        }
+        .login-wrapper-content-container {
+            margin: auto;
+            &:hover {
+                cursor: default;
+            }
+            .login-signup-content-container {
+                .login-signup-header-container {
+                    padding: 1rem 0;
+                    .login-signup-header-main-text-container {
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+                    .login-signup-header-other-text-container {
+                        padding: 0.5rem 0;
+                    }
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+                .login-signup-form-container {
+                    form {
+                        margin-bottom: 1rem;
+                    }
+                    button {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+            .login-wrapper-divider-container {
+                margin: 1.5rem 0;
+                border-bottom: 1px solid $lightGrayColor;
+                position: relative;
+                color: $lightGrayColor;
+                .login-wrapper-divider-text-container {
+                    display: inline-block;
+                    padding: 0 0.5rem;
+                    width: 3rem;
+                    height: 2rem;
+                    text-align: center;
+                    position: absolute;
+                    font-size: 1.5rem;
+                    top: -1rem;
+                    left: 128px;
+                    background: white;
+                }
+            }
+        }
+        .login-wrapper-footer-container {
+            .footer-social-media-handles-main-container {
+                background-color: $backgroundColor;
+                color: $textColor;
+            }
+        }
+    }
+
+    /* Extra small devices (phones, 450px and down) */
+    @media only screen and (max-width: 450px) {
+        .login-wrapper-content-container {
+            width: 90%;
+        }
+        .login-wrapper-company-details-container {
+            display: none;
+        }
+        .login-wrapper-content-wrapper-container {
+            width: 100%;
+        }
+    }
+
+    /* Extra small devices (phones, 450px and up) */
+    @media only screen and (min-width: 450px) {
+        .login-wrapper-content-container {
+            width: $loginSignupFormWidth;
+        }
+        .login-wrapper-company-details-container {
+            display: none;
+        }
+        .login-wrapper-content-wrapper-container {
+            width: 100%;
+        }
+    }
+
+    /* Small devices (portrait tablets and large phones, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .login-wrapper-content-container {
+            width: $loginSignupFormWidth;
+        }
+        .login-wrapper-company-details-container {
+            display: none;
+        }
+        .login-wrapper-content-wrapper-container {
+            width: 100%;
+        }
+    }
+
+    /* Normal devices (small size laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .login-wrapper-content-container {
+            width: $loginSignupFormWidth;
+        }
+        .login-wrapper-company-details-container {
+            display: block;
+        }
+        .login-wrapper-content-wrapper-container {
+            width: 70%;
+        }
+    } 
+
+    /* Large devices (large laptops and normal desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        .login-wrapper-content-container {
+            width: $loginSignupFormWidth;
+        }
+        .login-wrapper-company-details-container {
+            display: block;
+        }
+        .login-wrapper-content-wrapper-container {
+            width: 70%;
+        }
+    }
+
+    /* Extra large devices ( large size desktops, 1536px and up */
+    @media only screen and (min-width: 1536px) {
+        .login-wrapper-content-container {
+            width: $loginSignupFormWidth;
+        }
+        .login-wrapper-company-details-container {
+            display: block;
+        }
+        .login-wrapper-content-wrapper-container {
+            width: 70%;
+        }
+    }
+}
