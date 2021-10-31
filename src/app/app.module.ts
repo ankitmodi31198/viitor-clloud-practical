@@ -12,7 +12,6 @@ import { AuthInterceptorService } from './app-routing/auth-interceptor.service';
 import { AuthService } from './service/auth-service/auth.service';
 import player from 'lottie-web';
 import { LoginModule } from './login/login.module';
-import { MainModule } from './main/main.module';
 
 export function playerFactory() {
   return player;
@@ -29,7 +28,6 @@ export function playerFactory() {
     SignUpModule,
     HttpClientModule,
     LoginModule,
-    MainModule
   ],
   exports: [],
   providers: [

@@ -1,14 +1,13 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
-import { MainComponent } from '../main/main.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
-    path: '', 
-    component: MainComponent
+    path: '',
+    loadChildren: () => import('src/app/main/main.module').then(m => m.MainModule)
   },
   {
     path: 'login',
