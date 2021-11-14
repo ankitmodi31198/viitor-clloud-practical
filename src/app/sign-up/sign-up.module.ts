@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginWrapperModule } from '../login-wrapper/login-wrapper.module';
+import { CommonUiModule } from '../common-ui/common-ui.module';
 
 
 
@@ -19,7 +20,8 @@ import { LoginWrapperModule } from '../login-wrapper/login-wrapper.module';
     ReactiveFormsModule,
     MaterialModule,
     HttpClientModule,
-    LoginWrapperModule
+    LoginWrapperModule,
+    CommonUiModule
   ],
   exports: [
     SignUpComponent

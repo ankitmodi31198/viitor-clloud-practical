@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import './custom-theme.scss';
+@import "./custom-theme.scss";
 
-html, body { height: 100%; }
-body { 
-    margin: 0; 
-    // font-family: Roboto, "Helvetica Neue", sans-serif; 
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
     font-family: $fontFamily;
     color: $textColor;
-    
+
     * {
         outline: none;
     }
@@ -66,7 +69,7 @@ button {
 }
 
 .width50 {
-    width: 50%
+    width: 50%;
 }
 
 .cursor-pointer {
@@ -113,7 +116,7 @@ button {
             color: $lightGrayColor;
         }
     }
-    .form-field-label-icon-container {   
+    .form-field-label-icon-container {
         position: absolute;
         right: 1rem;
         top: 0.4rem;
@@ -127,7 +130,10 @@ button {
         font-size: 0.6rem;
     }
     &.data-form-field-container {
-        &.mat-form-field.mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-suffix {
+        &.mat-form-field.mat-form-field-appearance-fill
+            .mat-form-field-wrapper
+            .mat-form-field-flex
+            .mat-form-field-suffix {
             right: 0;
             bottom: 0;
         }
@@ -142,18 +148,27 @@ button {
 }
 
 .mat-form-field {
-    &.mat-form-field-appearance-legacy, &.mat-form-field-appearance-fill {
+    &.mat-form-field-appearance-legacy,
+    &.mat-form-field-appearance-fill {
         .mat-form-field-wrapper {
             padding-bottom: 0;
+            height: 2.5rem;
             .mat-form-field-flex {
                 padding: 0;
                 background-color: transparent;
+                height: 100%;
                 .mat-form-field-infix {
                     padding: 0;
                     border: none;
+                    height: 100%;
                     .mat-form-field-label-wrapper {
                         top: 0;
                         padding-top: 0;
+                    }
+                    > input {
+                        height: 100%;
+                        padding-top: 0.1rem;
+                        padding-bottom: 0.1rem;
                     }
                 }
                 .mat-form-field-suffix {
@@ -217,7 +232,7 @@ button {
     .content-width-resolution-wise {
         width: 90%;
     }
-} 
+}
 
 /* Large devices (large laptops and normal desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {

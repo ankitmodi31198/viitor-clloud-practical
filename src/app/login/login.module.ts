@@ -6,6 +6,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LoginWrapperModule } from '../login-wrapper/login-wrapper.module';
 import { MaterialModule } from '../material/material.module';
+import { CommonUiModule } from '../common-ui/common-ui.module';
 
 
 
@@ -20,6 +21,7 @@ import { MaterialModule } from '../material/material.module';
     RouterModule,
     MaterialModule,
     FormsModule,
+    CommonUiModule
   ],
   providers: [
     LoginService
