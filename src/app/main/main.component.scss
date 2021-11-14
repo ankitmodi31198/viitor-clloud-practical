@@ -4,8 +4,9 @@
         border-collapse: collapse;
         width: 100%;
     }
-    
-    td, th {
+
+    td,
+    th {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
@@ -18,9 +19,18 @@
         }
     }
     .git-demo-delete-button {
-        text-align:center;
+        text-align: center;
         button {
             background-color: red;
+            color: white;
+            padding: 4px 25px;
+            border-radius: 5px;
+        }
+    }
+    .git-demo-edit-button {
+        text-align: center;
+        button {
+            background-color: lightskyblue;
             color: white;
             padding: 4px 25px;
             border-radius: 5px;
@@ -42,15 +52,15 @@
     }
     .git-demo-button {
         color: #fff;
-        background-color: #4CAF50;
+        background-color: #4caf50;
         padding: 8px 25px;
         border-radius: 5px;
         display: flex;
         margin-left: 10px;
     }
     .git-demo-button:hover {
-        color: #000!important;
-        background-color: #ccc!important;
+        color: #000 !important;
+        background-color: #ccc !important;
     }
     .git-demo-search-container {
         display: flex;

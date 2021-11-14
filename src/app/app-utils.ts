@@ -29,3 +29,5 @@ export function setFormControlValue(formControlName: string, valueToBeset: any, 
     formGroup.controls[formControlName].updateValueAndValidity();
   }
 }
+
+export const urlRegex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;

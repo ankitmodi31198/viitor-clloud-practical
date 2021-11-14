@@ -8,6 +8,8 @@ import { LocalStorageKeyTypes } from '../service/local-storage/local-storage-key
 import { LocalstorageService } from '../service/local-storage/localstorageservice.service';
 import { take } from 'rxjs/operators';
 import { GithubDataService } from '../service/api/github-data.service';
+import { MatDialog } from '@angular/material/dialog';
+import { EditGithubDataComponent } from './edit-github-data/edit-github-data.component';
 
 @Component({
   selector: 'app-main',
@@ -29,8 +31,13 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private githubDataService: GithubDataService,
     private localstorageservice: LocalstorageService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog
   ) {
+    this.setLocalStorageGithubUserListData();
+  }
+
+  setLocalStorageGithubUserListData() {
     this.localStorageGithubUserListData = this.localstorageservice.getLocalStorage(LocalStorageKeyTypes.GITHUB_USERS_LIST);
   }
 
@@ -143,6 +150,18 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.gridSearchSubscription) {
       this.gridSearchSubscription.unsubscribe();
     }
+  }
+
+  editRowClickHandler(rowData) {
+    this.dialog
+      .open(EditGithubDataComponent, {
+        data: rowData
+      })
+      .afterClosed()
+      .pipe(take(1))
+      .subscribe(() => {
+        this.setLocalStorageGithubUserListData();
+      });
   }
 
 }

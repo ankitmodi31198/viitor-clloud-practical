@@ -1,0 +1,22 @@
+<div class="form-container height100 width100">
+    <form appFormGroup [formGroup]="baseForm">
+
+        <mat-form-field appFormField="Login Id" class="form-field-container" appearance="fill">
+            <input matInput formControlName="login" placeholder="Login Id">
+        </mat-form-field>
+
+        <mat-form-field appFormField="Name" class="form-field-container" appearance="fill">
+            <input matInput formControlName="name" placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field appFormField="Avatar Url" class="form-field-container" appearance="fill">
+            <input matInput formControlName="avatar_url" placeholder="Avatar Url">
+        </mat-form-field>
+
+        <mat-form-field appFormField="Public Repos" class="form-field-container" appearance="fill">
+            <input matInput formControlName="public_repos" placeholder="Public Repos">
+        </mat-form-field>
+
+    </form>
+    <button mat-raised-button color="primary" (click)="editClickHandler()">Update</button>
+</div>

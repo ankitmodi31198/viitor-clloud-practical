@@ -4,6 +4,8 @@ import { MainComponent } from './main.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GithubDataService } from '../service/api/github-data.service';
 import { MainRoutingModule } from './main-routing.module';
+import { MaterialModule } from '../material/material.module';
+import { EditGithubDataModule } from './edit-github-data/edit-github-data.module';
 
 
 
@@ -15,7 +17,9 @@ import { MainRoutingModule } from './main-routing.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MainRoutingModule
+    MainRoutingModule,
+    MaterialModule,
+    EditGithubDataModule
   ],
   exports: [
     MainComponent
