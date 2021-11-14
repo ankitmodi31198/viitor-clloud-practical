@@ -6,12 +6,14 @@ import { GithubDataService } from '../service/api/github-data.service';
 import { MainRoutingModule } from './main-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { EditGithubDataModule } from './edit-github-data/edit-github-data.module';
+import { PreviewGithubDataComponent } from './preview-github-data/preview-github-data.component';
 
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    PreviewGithubDataComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { EditGithubDataModule } from './edit-github-data/edit-github-data.module
     EditGithubDataModule
   ],
   exports: [
-    MainComponent
+    MainComponent,
+    PreviewGithubDataComponent
   ],
   providers: [
     GithubDataService

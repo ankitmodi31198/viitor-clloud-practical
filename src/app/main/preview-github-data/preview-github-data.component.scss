@@ -18,24 +18,6 @@
             text-align: center;
         }
     }
-    .git-demo-delete-button {
-        text-align: center;
-        button {
-            background-color: red;
-            color: white;
-            padding: 4px 25px;
-            border-radius: 5px;
-        }
-    }
-    .git-demo-edit-button {
-        text-align: center;
-        button {
-            background-color: lightskyblue;
-            color: white;
-            padding: 4px 25px;
-            border-radius: 5px;
-        }
-    }
 }
 .git-demo-homepage-container {
     height: 100vh;
@@ -78,7 +60,7 @@
     .git-demo-homepage-content-container {
         height: calc(100% - 37px);
     }
-    .git-demo-preview-button-container {
+    .git-demo-edit-button-container {
         float: right;
         height: 37px;
     }

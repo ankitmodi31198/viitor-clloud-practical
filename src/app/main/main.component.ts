@@ -164,4 +164,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
       });
   }
 
+  previewClickHandler() {
+    this.router.navigate(['/preview-data']);
+  }
 }

@@ -1,0 +1,35 @@
+<div class="git-demo-homepage-container">
+    <div class="git-demo-homepage-content-container">
+        <div class="git-demo-homepage-header">
+            <h1 class="git-demo-text">
+                Preview Data!
+            </h1>
+            <span class="git-demo-logout" (click)="logoutClickHandler()">
+                Logout
+            </span>
+        </div>
+        <div class="git-demo-homepage-github-user-grid-container">
+            <table>
+                <tr>
+                    <th>Login</th>
+                    <th>Name</th>
+                    <th>Avatar url</th>
+                    <th>Public repos</th>
+                </tr>
+                <tr *ngFor="let eachGithubUserData of localStorageGithubUserListData; index as i">
+                    <td>{{eachGithubUserData.login}}</td>
+                    <td>{{eachGithubUserData.name}}</td>
+                    <td>{{eachGithubUserData.avatar_url}}</td>
+                    <td>{{eachGithubUserData.public_repos}}</td>
+                </tr>
+                <tr class="git-demo-no-records-found"
+                    *ngIf="!(localStorageGithubUserListData && localStorageGithubUserListData.length > 0)">
+                    <td colspan="5">No Records found</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="git-demo-edit-button-container">
+        <button mat-raised-button color="primary" (click)="editClickHandler()">Edit Data</button>
+    </div>
+</div>
